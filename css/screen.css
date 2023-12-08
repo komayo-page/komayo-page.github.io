@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: white;
+    --color: #444;
+    --link-color: #6d071a;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0d1117;
+    --color: #888;
+    --link-color: #f9f1f9;
+  }
+}
+
+:root {
+  margin: 1em;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+a {
+  color: var(--link-color);
+}
