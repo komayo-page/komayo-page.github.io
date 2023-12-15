@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://komayo.page/sitemap.xml
