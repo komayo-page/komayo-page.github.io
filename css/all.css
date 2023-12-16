@@ -1,12 +1,9 @@
 @charset "utf-8";
 
-:root {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
 body {
   display: flex;
   flex-direction: row;
+  font-family: 'Garamond', serif;
 }
 
 header {
