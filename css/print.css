@@ -3,3 +3,7 @@
 @page {
   margin: 1cm 2cm;
 }
+
+a {
+  color: inherit;
+}

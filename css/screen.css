@@ -1,28 +1,56 @@
 @charset "utf-8";
 
+@media (orientation: landscape) {
+  :root {
+    --content-size: 100vh;
+  }
+}
+
+@media (orientation: portrait) {
+  :root {
+    --content-size: 100vw;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: #f8f5e6;
-    --color: #444;
+    --background-color: #d3d3d3;
+    --color: black;
     --link-color: #6d071a;
-    --text-shadow: white;
+    --shadow-color: #f6cfe9;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #0d1117;
-    --color: #888;
+    --background-color: black;
+    --color: white;
     --link-color: #e37f98;
-    --text-shadow: black;
+    --shadow-color: #58354d;
   }
 }
 
 :root {
-  margin: 1em;
+  --font-size-2: calc(var(--content-size)/26);
+  --font-size-1: calc(var(--content-size)/32);
   background-color: var(--background-color);
   color: var(--color);
-  text-shadow: var(--text-shadow) 1px 1px;
+  font-size: var(--font-size-1);
+  text-shadow: var(--shadow-color) 1px 1px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: var(--font-size-1) var(--font-size-2);
+  padding: 0;
+}
+
+body > header > img {
+  margin-bottom: var(--font-size-1);
 }
 
 a {
