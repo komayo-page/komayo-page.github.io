@@ -26,50 +26,58 @@
 
   <body>
     <header>
-      <img
-        src="komayo.svg"
-        alt="Komayō"
-        title="Komayō">
-
       <picture>
-        <source type="image/webp" srcset="img/moonlit-enchantress.webp">
-        <source type="image/jpeg" srcset="img/moonlit-enchantress.jpg">
+        <source srcset="komayo-light.svg" media="(prefers-color-scheme: light)">
 
         <img
-          src="img/moonlit-enchantress.jpg"
+          src="komayo-dark.svg"
+          alt="Komayō"
+          title="Komayō"
+          height="22.599"
+          width="92.595">
+      </picture>
+    </header>
+
+    <article>
+      <nav>
+        <ul>
+          <li><a title="Bengali" href="https://bn.komayo.page" lang="bn">বাংলা</a></li>
+          <li><a title="English" href="https://en.komayo.page" lang="en">English</a></li>
+          <li><a title="Persian" href="https://fa.komayo.page" lang="fa">فارسی</a></li>
+          <li><a title="French" href="https://fr.komayo.page" lang="fr">Français</a></li>
+          <li><a title="Gujarati" href="https://gu.komayo.page" lang="gu">ગુજરાતી</a></li>
+          <li><a title="Hindi" href="https://hi.komayo.page" lang="hi">हिन्दी</a></li>
+          <li><a title="Indonesian" href="https://id.komayo.page" lang="id">Bahasa Indonesia</a></li>
+          <li><a title="Japanese" href="https://ja.komayo.page" lang="ja">日本語</a></li>
+          <li><a title="Javanese" href="https://jv.komayo.page" lang="jv">Basa Jawa</a></li>
+          <li><a title="Kannada" href="https://kn.komayo.page" lang="kn">ಕನ್ನಡ</a></li>
+          <li><a title="Korean" href="https://ko.komayo.page" lang="ko">한국어</a></li>
+          <li><a title="Lao" href="https://lo.komayo.page" lang="lo">ພາສາລາວ</a></li>
+          <li><a title="Malayalam" href="https://ml.komayo.page" lang="ml">മലയാളം</a></li>
+          <li><a title="Marathi" href="https://mr.komayo.page" lang="mr">मराठी</a></li>
+          <li><a title="Myanmar" href="https://my.komayo.page" lang="my">မြန်မာဘာသာ</a></li>
+          <li><a title="Odia" href="https://or.komayo.page" lang="or">ଓଡ଼ିଆ</a></li>
+          <li><a title="Punjabi" href="https://pa.komayo.page" lang="pa">ਪੰਜਾਬੀ</a></li>
+          <li><a title="Tamil" href="https://ta.komayo.page" lang="ta">தமிழ்</a></li>
+          <li><a title="Telugu" href="https://te.komayo.page" lang="te">తెలుగు</a></li>
+          <li><a title="Thai" href="https://th.komayo.page" lang="th">ภาษาไทย</a></li>
+          <li><a title="Urdu" href="https://ur.komayo.page" lang="ur">اردو</a></li>
+          <li><a title="Vietnamese" href="https://vi.komayo.page" lang="vi">Tiếng Việt</a></li>
+          <li><a title="Chinese" href="https://zh.komayo.page" lang="zh">中文</a></li>
+        </ul>
+      </nav>
+
+      <picture>
+        <source type="image/webp" srcset="img/moonlit-enchantress-small.webp" media="(max-width: 512px)" height="512" width="512">
+        <source type="image/webp" srcset="img/moonlit-enchantress-large.webp" media="(min-width: 512px)" height="1024" width="1024">
+
+        <img
+          src="img/moonlit-enchantress-fallback.jpg"
           alt="Digital art of Komayō, a bewitching creature from Japanese lore, dressed in a blue kimono with floral patterns, with long dark hair and expressive makeup."
           title="Komayō, the Enchantress of the Kansai Region under a full moon, luring passersby into a game of ōgi"
           height="1024"
           width="1024">
       </picture>
-    </header>
-
-    <nav>
-      <ul>
-        <li><a title="Bengali" href="https://bn.komayo.page"><span lang="bn">বাংলা</span></a></li>
-        <li><a title="English" href="https://en.komayo.page"><span lang="en">English</span></a></li>
-        <li><a title="Persian" href="https://fa.komayo.page"><span lang="fa">فارسی</span></a></li>
-        <li><a title="French" href="https://fr.komayo.page"><span lang="fr">Français</span></a></li>
-        <li><a title="Gujarati" href="https://gu.komayo.page"><span lang="gu">ગુજરાતી</span></a></li>
-        <li><a title="Hindi" href="https://hi.komayo.page"><span lang="hi">हिन्दी</span></a></li>
-        <li><a title="Indonesian" href="https://id.komayo.page"><span lang="id">Bahasa Indonesia</span></a></li>
-        <li><a title="Japanese" href="https://ja.komayo.page"><span lang="ja">日本語</span></a></li>
-        <li><a title="Javanese" href="https://jv.komayo.page"><span lang="jv">Basa Jawa</span></a></li>
-        <li><a title="Kannada" href="https://kn.komayo.page"><span lang="kn">ಕನ್ನಡ</span></a></li>
-        <li><a title="Korean" href="https://ko.komayo.page"><span lang="ko">한국어</span></a></li>
-        <li><a title="Lao" href="https://lo.komayo.page"><span lang="lo">ພາສາລາວ</span></a></li>
-        <li><a title="Malayalam" href="https://ml.komayo.page"><span lang="ml">മലയാളം</span></a></li>
-        <li><a title="Marathi" href="https://mr.komayo.page"><span lang="mr">मराठी</span></a></li>
-        <li><a title="Myanmar" href="https://my.komayo.page"><span lang="my">မြန်မာဘာသာ</span></a></li>
-        <li><a title="Odia" href="https://or.komayo.page"><span lang="or">ଓଡ଼ିଆ</span></a></li>
-        <li><a title="Punjabi" href="https://pa.komayo.page"><span lang="pa">ਪੰਜਾਬੀ</span></a></li>
-        <li><a title="Tamil" href="https://ta.komayo.page"><span lang="ta">தமிழ்</span></a></li>
-        <li><a title="Telugu" href="https://te.komayo.page"><span lang="te">తెలుగు</span></a></li>
-        <li><a title="Thai" href="https://th.komayo.page"><span lang="th">ภาษาไทย</span></a></li>
-        <li><a title="Urdu" href="https://ur.komayo.page"><span lang="ur">اردو</span></a></li>
-        <li><a title="Vietnamese" href="https://vi.komayo.page"><span lang="vi">Tiếng Việt</span></a></li>
-        <li><a title="Chinese" href="https://zh.komayo.page"><span lang="zh">中文</span></a></li>
-      </ul>
-    </nav>
+    </article>
   </body>
 </html>

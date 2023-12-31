@@ -4,7 +4,7 @@
   --font-primary: 'Garamond', serif;
 }
 
-body {
+article {
   display: flex;
   flex-direction: row;
   font-family: var(--font-primary);
@@ -12,14 +12,15 @@ body {
   letter-spacing: 0.025em;
 }
 
-header {
+article nav {
   flex: 0 0 50%;
   max-width: 50%;
 }
 
-nav {
+article picture {
   flex: 1 1 50%;
   max-width: 50%;
+  margin-top: auto;
 }
 
 img {
