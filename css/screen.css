@@ -52,3 +52,11 @@ body {
 a {
   color: var(--link-color);
 }
+
+body > article h1 {
+  color: var(--article-title-text-color);
+}
+
+body > article h1 {
+  text-shadow: 3px 2px 1px var(--article-title-shadow-color);
+}

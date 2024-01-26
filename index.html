@@ -1,27 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" itemscope itemtype="https://schema.org/WebPage">
   <head>
-    <title>Komayō</title>
+    <title>Komayo</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Explore the legend of Komayō, the yokai ōgi enchantress from the Kansai region of Japan. This page features a captivating digital portrait of Komayō, draped in a moonlit blue kimono with floral designs, embodying the mystique of the full moon's night. Choose your language to delve into the urban myth and experience the tale of strategic deception and eternal wanderers.">
-    <meta name="keywords" content="histoire, fantôme, Komayō, obake, ōgi, shōgi, yōkai, yūrei">
+    <meta name="description" content="In the moonlight, the yokai Komayo ensnares ogi players, draining their essence and dooming them to wander as yurei, longing to see her again.">
+    <meta name="keywords" content="story, ghost, Komayo, obake, ogi, shogi, yokai, yūrei">
     <meta name="author" content="Cyril Veltin">
-    <meta property="og:title" content="Komayō">
+    <meta property="og:title" content="Komayo">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://komayo.page/">
     <meta property="og:image" content="https://komayo.page/img/moonlit-enchantress.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Komayō">
+    <meta name="twitter:title" content="Komayo">
     <meta name="twitter:image" content="https://komayo.page/img/moonlit-enchantress.webp">
 
     <link rel="canonical" href="https://komayo.page/">
     <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+
+    <style media="screen">
+      @media (prefers-color-scheme: light) {
+        :root {
+          --article-title-text-color: #000;
+          --article-title-shadow-color: #ccc;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --article-title-text-color: #fff;
+          --article-title-shadow-color: #333;
+        }
+      }
+    </style>
+
     <link rel="stylesheet" href="css/all.css" media="all">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/screen.css" media="screen">
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "Komayo",
+        "url": "https://komayo.page/",
+        "description": "In the moonlight, the yokai Komayo ensnares ogi players, draining their essence and dooming them to wander as yurei, longing to see her again.",
+        "author": {
+          "@type": "Person",
+          "name": "Cyril Veltin"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://komayo.page/img/moonlit-enchantress.webp",
+          "height": "1024",
+          "width": "1024",
+          "description": "Digital art of Komayo, a bewitching creature from Japanese lore, dressed in a blue kimono with floral patterns, with long dark hair and expressive makeup."
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://komayo.page/"
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -31,14 +73,28 @@
 
         <img
           src="komayo-dark.svg"
-          alt="Komayō"
-          title="Komayō"
-          height="22.599"
-          width="92.595">
+          alt="Komayo"
+          title="Komayo"
+          height="22"
+          width="92">
       </picture>
     </header>
 
     <article>
+      <h1>The enchantress with ōgi pieces</h1>
+
+      <picture>
+        <source type="image/webp" srcset="img/moonlit-enchantress-small.webp" media="(max-width: 512px)" height="512" width="512">
+        <source type="image/webp" srcset="img/moonlit-enchantress-large.webp" media="(min-width: 512px)" height="1024" width="1024">
+
+        <img
+          src="img/moonlit-enchantress-fallback.jpg"
+          alt="Digital art of Komayo, a bewitching creature from Japanese lore, dressed in a blue kimono with floral patterns, with long dark hair and expressive makeup."
+          title="Komayo, a captivating enchantress under the full moon, enticing passersby into a game of ōgi, a variant of shogi (traditional Japanese chess)"
+          height="1024"
+          width="1024">
+      </picture>
+
       <nav>
         <ul>
           <li><a title="Bengali" href="https://bn.komayo.page" lang="bn">বাংলা</a></li>
@@ -66,18 +122,6 @@
           <li><a title="Chinese" href="https://zh.komayo.page" lang="zh">中文</a></li>
         </ul>
       </nav>
-
-      <picture>
-        <source type="image/webp" srcset="img/moonlit-enchantress-small.webp" media="(max-width: 512px)" height="512" width="512">
-        <source type="image/webp" srcset="img/moonlit-enchantress-large.webp" media="(min-width: 512px)" height="1024" width="1024">
-
-        <img
-          src="img/moonlit-enchantress-fallback.jpg"
-          alt="Digital art of Komayō, a bewitching creature from Japanese lore, dressed in a blue kimono with floral patterns, with long dark hair and expressive makeup."
-          title="Komayō, the Enchantress of the Kansai Region under a full moon, luring passersby into a game of ōgi"
-          height="1024"
-          width="1024">
-      </picture>
     </article>
   </body>
 </html>

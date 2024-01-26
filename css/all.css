@@ -1,26 +1,18 @@
 @charset "utf-8";
 
 :root {
-  --font-primary: 'Garamond', serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-title: "Garamond", "Palatino", serif;
 }
 
-article {
-  display: flex;
-  flex-direction: row;
-  font-family: var(--font-primary);
-  line-height: 1.6;
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
   letter-spacing: 0.025em;
 }
 
-article nav {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-article picture {
-  flex: 1 1 50%;
-  max-width: 50%;
-  margin-top: auto;
+article h1 {
+  font-family: var(--font-title);
 }
 
 img {
