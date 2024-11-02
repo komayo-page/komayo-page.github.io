@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+:root {
+  --background-color: white;
+  --color: black;
+  --link-color: #6d071a;
+  --quote-color: #6d071a;
+  --article-title-text-color: #000;
+  --article-title-shadow-color: #ccc;
+}
+
 @media (orientation: landscape) {
   :root {
     --content-size: 100vh;
@@ -12,31 +21,12 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: white;
-    --color: black;
-    --link-color: #6d071a;
-    --shadow-color: #ccc;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: black;
-    --color: white;
-    --link-color: #e37f98;
-    --shadow-color: #58354d;
-  }
-}
-
 :root {
   --font-size-2: calc(var(--content-size)/26);
   --font-size-1: calc(var(--content-size)/32);
   background-color: var(--background-color);
   color: var(--color);
   font-size: var(--font-size-1);
-  text-shadow: var(--shadow-color) 1px 1px;
 }
 
 html {
