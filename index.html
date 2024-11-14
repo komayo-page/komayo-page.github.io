@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="https://schema.org/WebPage">
+<!doctype html>
+<html lang="en" dir="ltr">
   <head>
     <title>Komayō</title>
 
@@ -10,9 +10,6 @@
     <meta name="keywords" content="story, ghost, Komayo, obake, ōgi, shōgi, yokai, yūrei">
     <meta name="robots" content="index,follow">
     <meta name="author" content="Cyril Veltin">
-    <meta name="revisit-after" content="7 days">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
     <meta name="copyright" content="Cyril Veltin 2023">
 
     <meta property="og:site_name" content="Komayō">
@@ -20,19 +17,13 @@
     <meta property="og:title" content="Komayō">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://komayo.page/">
-    <meta property="og:image" content="https://komayo.page/img/komayo_m8sca8_c_scale,w_1024.webp">
     <meta property="og:description" content="In the moonlight, the yokai Komayo ensnares ōgi players, draining their essence and dooming them to wander as yurei, longing to see her again.">
     <meta property="og:article:author" content="Cyril Veltin">
     <meta property="og:article:published_time" content="2023-06-26">
 
-    <meta itemprop="name" content="Komayō">
-    <meta itemprop="description" content="In the moonlight, the yokai Komayo ensnares ōgi players, draining their essence and dooming them to wander as yurei, longing to see her again.">
-    <meta itemprop="image" content="https://komayo.page/img/komayo_m8sca8_c_scale,w_1024.webp">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Komayō">
     <meta name="twitter:description" content="In the moonlight, the yokai Komayo ensnares ōgi players, draining their essence and dooming them to wander as yurei, longing to see her again.">
-    <meta name="twitter:image" content="https://komayo.page/img/komayo_m8sca8_c_scale,w_1024.webp">
 
     <link rel="canonical" href="https://komayo.page/">
 
@@ -43,135 +34,12 @@
     <meta name="apple-mobile-web-app-title" content="Komayō">
     <link rel="manifest" href="/site.webmanifest">
 
+    <link href="/all.css" rel="stylesheet">
+
     <style>
-      @media (orientation: landscape) {
-        :where(html) {
-          --content-size: 100vh;
-        }
-      }
-
-      @media (orientation: portrait) {
-        :where(html) {
-          --content-size: 100vw;
-        }
-      }
-
-      :where(html) {
-        --font-family-body:     Baskerville, "Baskerville Old Face", "Hoefler Text", "Palatino Linotype", Georgia, serif;
-        --font-family-dialogue: Georgia, "Cambria", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
-        --font-family-title:    Georgia, "Times New Roman", Times, serif;
-        --font-family-quote:    Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-
-        --font-size-1: calc(var(--content-size)/32);
-        --font-size-2: calc(var(--content-size)/26);
-        --font-size-3: calc(var(--content-size)/20);
-        --font-size-4: calc(var(--content-size)/14);
-
-        --side-padding: calc(1vw + 8px);
-        --primary-color: #6d071a;
-        --border-color: #000;
-      }
-
-      h1 {
-        font-size: var(--font-size-4);
-      }
-
-      h2 {
-        font-size: var(--font-size-3);
-      }
-
-      h3 {
-        font-size: var(--font-size-2);
-      }
-
-      :root {
-        font-size: var(--font-size-1);
-      }
-
-      /* Layout */
-      body {
-        font-family: var(--font-family-body);
-        line-height: 1.7;
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: var(--side-padding) 0;
-      }
-
-      /* Lists */
-      dl, ul, ol, blockquote {
-        margin-left: 2em;
-        padding-left: 1em;
-      }
-
-      /* Padding for all body grandchildren except article pictures */
-      body > * > *:not(article > picture) {
-        padding-inline: var(--side-padding);
-      }
-
-      body > * > picture {
-        text-align: center;
-      }
-
-      body > * > picture img {
-        margin: auto;
-        display: block;
-      }
-
-      body > nav img {
-        display: inline;
-        vertical-align: middle;
-        height: 1em;
-        width: auto;
-      }
-
-      /* Typography */
-      h1, h2, h3 {
-        font-family: var(--font-family-title);
-        line-height: 1.3;
-        margin-bottom: 0.8em;
-      }
-
-      /* Article styles */
-      article blockquote {
-        font-family: var(--font-family-quote);
-        border-left: thin solid var(--border-color);
-      }
-
-      article q {
-        font-family: var(--font-family-dialogue);
-        color: var(--primary-color);
-      }
-
-      article p {
-        text-align: justify;
-      }
-
-      /* Links */
-      a {
-        color: var(--primary-color);
-      }
-
-      /* Footer */
-      footer {
-        margin-top: 2em;
-      }
-
-      .breadcrumb {
-        list-style: none;
-        margin: 0;
-      }
-
-      .breadcrumb li {
-        display: inline;
-      }
-
-      .breadcrumb a:first-child {
-        text-decoration: none;
-      }
-
-      .breadcrumb li:not(:last-child)::after {
-        content: " \00BB"; /* Unicode for &raquo; */
-        margin: 0 5px;
+      h1 > img {
+        height: auto;
+        max-width: min(50%, 512px);
       }
     </style>
 
@@ -179,30 +47,48 @@
       {
         "@context": "http://schema.org",
         "@type": "WebPage",
-        "name": "Komayo",
+        "@id": "https://komayo.page/",
+        "name": "Komayo - Language Selection",
         "url": "https://komayo.page/",
         "description": "In the moonlight, the yokai Komayo ensnares ōgi players, draining their essence and dooming them to wander as yurei, longing to see her again.",
         "author": {
           "@type": "Person",
           "name": "Cyril Veltin"
         },
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://komayo.page/img/komayo_m8sca8_c_scale,w_1024.webp",
-          "height": "1024",
-          "width": "1024",
-          "description": "Digital art of Komayo, a bewitching creature from Japanese lore, dressed in a blue kimono with floral patterns, with long dark hair and expressive makeup."
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Komayō",
+          "url": "https://komayo.page/"
         },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://komayo.page/"
-        }
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "availableLanguage": [
+            "bn", "en", "fa", "fr", "gu", "hi", "id", "ja", "jv", "kn",
+            "ko", "lo", "ml", "mr", "my", "or", "pa", "ta", "te", "th",
+            "ur", "vi", "zh"
+          ]
+        },
+        "potentialAction": {
+          "@type": "ChooseAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://{language}.komayo.page/",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        "dateModified": "2023-06-26",
+        "datePublished": "2023-06-26"
       }
     </script>
   </head>
 
   <body>
-    <article>
+    <article itemscope itemtype="https://schema.org/WebPage">
       <h1>
         <img
           width="512"
@@ -239,33 +125,6 @@
         <li><a title="Vietnamese" href="https://vi.komayo.page" lang="vi">Tiếng Việt</a></li>
         <li><a title="Chinese" href="https://zh.komayo.page" lang="zh">中文</a></li>
       </ul>
-
-      <picture>
-        <img
-          width="1024"
-          height="1024"
-          style="max-width: 100%; height: auto;"
-          sizes="(max-width: 1024px) 100vw, 1024px"
-          srcset="
-            img/komayo_m8sca8_c_scale,w_200.webp 200w,
-            img/komayo_m8sca8_c_scale,w_320.webp 320w,
-            img/komayo_m8sca8_c_scale,w_410.webp 410w,
-            img/komayo_m8sca8_c_scale,w_491.webp 491w,
-            img/komayo_m8sca8_c_scale,w_536.webp 536w,
-            img/komayo_m8sca8_c_scale,w_597.webp 597w,
-            img/komayo_m8sca8_c_scale,w_665.webp 665w,
-            img/komayo_m8sca8_c_scale,w_719.webp 719w,
-            img/komayo_m8sca8_c_scale,w_784.webp 784w,
-            img/komayo_m8sca8_c_scale,w_841.webp 841w,
-            img/komayo_m8sca8_c_scale,w_895.webp 895w,
-            img/komayo_m8sca8_c_scale,w_943.webp 943w,
-            img/komayo_m8sca8_c_scale,w_996.webp 996w,
-            img/komayo_m8sca8_c_scale,w_1017.webp 1017w,
-            img/komayo_m8sca8_c_scale,w_1024.webp 1024w"
-          src="img/komayo_m8sca8_c_scale,w_1024.webp"
-          alt="Digital art of Komayo, a bewitching creature from Japanese lore, dressed in a blue kimono with floral patterns, with long dark hair and expressive makeup."
-        >
-      </picture>
     </article>
 
     <footer>
