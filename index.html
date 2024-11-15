@@ -45,30 +45,39 @@
 
     <script type="application/ld+json">
       {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "WebPage",
         "@id": "https://komayo.page/",
-        "name": "Komayo - Language Selection",
+        "@language": "en",
+        "name": "Komayō - Language Selection",
+        "alternateName": "小魔女 - 言語選択",
         "url": "https://komayo.page/",
         "description": "In the moonlight, the yokai Komayo ensnares ōgi players, draining their essence and dooming them to wander as yurei, longing to see her again.",
         "author": {
           "@type": "Person",
           "name": "Cyril Veltin"
         },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sashité",
+          "url": "https://sashite.com/"
+        },
         "inLanguage": "en",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Komayō",
-          "url": "https://komayo.page/"
-        },
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "availableLanguage": [
-            "bn", "en", "fa", "fr", "gu", "hi", "id", "ja", "jv", "kn",
-            "ko", "lo", "ml", "mr", "my", "or", "pa", "ta", "te", "th",
-            "ur", "vi", "zh"
-          ]
+          "url": "https://komayo.page/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://{language}.komayo.page/",
+              "actionPlatform": [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform"
+              ]
+            }
+          }
         },
         "potentialAction": {
           "@type": "ChooseAction",
@@ -81,14 +90,48 @@
             ]
           }
         },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "https://komayo.page/",
+                "name": "Language Selection"
+              }
+            }
+          ]
+        },
+        "mainContentOfPage": {
+          "@type": "WebPageElement",
+          "cssSelector": "article"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "/logo/komayo.svg",
+          "width": "512",
+          "height": "125",
+          "encodingFormat": "image/svg+xml",
+          "caption": "Komayō Logo"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "article"]
+        },
         "dateModified": "2023-06-26",
-        "datePublished": "2023-06-26"
+        "datePublished": "2023-06-26",
+        "copyrightYear": "2023",
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Cyril Veltin"
+        }
       }
     </script>
   </head>
 
   <body>
-    <article itemscope itemtype="https://schema.org/WebPage">
+    <article itemscope itemtype="https://schema.org/WebSite">
       <h1>
         <img
           width="512"
