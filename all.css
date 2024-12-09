@@ -13,14 +13,8 @@
 }
 
 :where(html) {
-  --color-background: #ece9d6;
-  --color-text: #292523;
-
-  --color-primary: #6d071a;
-  --color-link: #40030e;
-
-  --color-text-soft: #454545;
-  --color-text-subtle: #666666;
+  --color-background: #000;
+  --color-link: #fff;
 
   --font-family-body: "Baskerville",
                       "Libre Baskerville",
@@ -31,186 +25,66 @@
                       Georgia,
                       serif;
 
-  --font-family-title: "Didot",
-                      "Didot LT Std",
-                      "Hoefler Text",
-                      "Libre Caslon Display",
-                      "Big Caslon",
-                      Georgia,
-                      serif;
-
-  --font-family-quote: "Hoefler Text",
-                      "Cormorant Garamond",
-                      "Adobe Garamond Pro",
-                      "Garamond Premier Pro",
-                      "EB Garamond",
-                      "Garamond",
-                      Georgia,
-                      serif;
-
-  --font-family-dialogue: "Scala Pro",
-                          "Source Serif Pro",
-                          "Crimson Pro",
-                          "Goudy Old Style",
-                          "Athelas",
-                          "Charter",
-                          Georgia,
-                          serif;
-
   --font-size-1: calc(var(--content-size)/14);
-  --font-size-2: calc(var(--content-size)/20);
-  --font-size-3: calc(var(--content-size)/26);
-  --font-size-4: calc(var(--content-size)/32);
-
-  --side-padding: calc(1vw + 8px);
-}
-
-h1 {
-  font-size: var(--font-size-1);
-}
-
-h2 {
-  font-size: var(--font-size-2);
-}
-
-h3 {
-  font-size: var(--font-size-3);
 }
 
 :root {
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-1);
 }
 
-html {
+html,
+body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-background);
 }
 
 body {
-  background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family-body);
-  line-height: 1.7;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: var(--side-padding) 0;
-  overflow-x: hidden;
-}
-
-time,
-figcaption,
-blockquote cite {
-  color: var(--color-text-soft);
-}
-
-small,
-aside,
-[aria-label="breadcrumb"],
-footer {
-  color: var(--color-text-subtle);
-}
-
-html > *,
-body > main,
-body > main > * {
+  height: 100vh;
   display: flex;
-  flex-flow: column;
-  row-gap: var(--side-padding);
-}
-
-blockquote > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-nav[aria-label="breadcrumb"] img {
-  display: inline-block;
-  vertical-align: text-bottom;
-  height: 1em;
-  width: auto;
-}
-
-nav[aria-label="breadcrumb"] ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav[aria-label="breadcrumb"] ol li {
-  display: inline;
-}
-
-nav[aria-label="breadcrumb"] ol a:first-child {
-  text-decoration: none;
-}
-
-nav[aria-label="breadcrumb"] ol li:not(:last-child)::after {
-  content: " \00BB"; /* Unicode for &raquo; */
-  margin: 0 5px;
-}
-
-main > article blockquote,
-main > article li,
-main > article dd {
-  margin-inline: 2em;
-}
-
-main > nav li {
-  margin-inline: var(--side-padding);
-}
-
-body > *:not(main),
-body > main > * > *:not(picture) {
-  margin: 0;
-  padding: 0.4em var(--side-padding);
-}
-
-body > main > article > picture {
-  text-align: center;
-}
-
-body > main > article > picture > img {
-  margin: auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-main > * blockquote,
-main > * dl,
-main > * ol,
-main > * ul {
-  margin: 0;
-  padding: 0;
-}
-
-main > article p {
-  text-align: justify;
-}
-
-h1,
-h2,
-h3 {
-  color: var(--color-text);
-  font-family: var(--font-family-title);
-  line-height: 1.3;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 a {
   color: var(--color-link);
+  text-decoration: none;
+  padding: calc(var(--font-size-1) / 4);
+  display: block;
 }
 
-blockquote {
-  font-family: var(--font-family-quote);
-  color: var(--color-text-subtle);
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-q {
-  font-family: var(--font-family-dialogue);
-  color: var(--color-primary);
+h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-footer a,
-[aria-label="breadcrumb"] a {
-  color: var(--color-primary);
+h1 img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: var(--font-size-1) 0;
+  width: min(50%, 512px);
+}
+
+h1,
+li {
+  margin: 0;
+  padding: calc(var(--font-size-1) / 4);
 }
