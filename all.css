@@ -1,90 +1,114 @@
 @charset "UTF-8";
 
 @media (orientation: landscape) {
-  :where(html) {
+  html {
     --content-size: 100vh;
   }
 }
 
 @media (orientation: portrait) {
-  :where(html) {
+  html {
     --content-size: 100vw;
   }
 }
 
-:where(html) {
+html {
   --color-background: #000;
-  --color-link: #fff;
+  --color-text: #666;
+  --color-link: #ccc;
+  --color-text-subtle: #444;
 
   --font-family-body: "Baskerville",
                       "Libre Baskerville",
                       "Baskerville Old Face",
-                      "Palatino",
-                      "Palatino Linotype",
+                      "New Baskerville",
+                      "Century Schoolbook",
                       ui-serif,
-                      Georgia,
                       serif;
 
   --font-size-1: calc(var(--content-size)/14);
-}
+  --font-size-2: calc(var(--content-size)/20);
+  --font-size-3: calc(var(--content-size)/26);
+  --font-size-4: calc(var(--content-size)/32);
 
-:root {
-  font-size: var(--font-size-1);
-}
+  --side-padding: calc(1vw + 8px);
 
-html,
-body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-background);
+
+  font-size: var(--font-size-4);
 }
 
 body {
+  background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family-body);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  line-height: 1.7;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--side-padding) 0;
   overflow-x: hidden;
+}
+
+html > *,
+body > main,
+body > main > * {
+  display: flex;
+  flex-flow: column;
+  row-gap: var(--side-padding);
+}
+
+body > header {
+  /* Enable flexbox layout */
+  display: flex;
+
+  /* Handle RTL/LTR automatically based on dir attribute */
+  flex-direction: row;
+
+  /* Align items vertically */
+  align-items: flex-end;
+
+  /* Allow items to wrap if needed */
+  flex-wrap: nowrap;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the image square while maintaining aspect ratio */
+body > header img {
+  /* Ensure image maintains aspect ratio */
+  object-fit: contain;
+
+  /* Prevent image from shrinking */
+  flex-shrink: 0;
+
+  display: block;
+  height: 3em;
+  width: auto;
+}
+
+body > *:not(main),
+body > main > * > * {
+  margin: 0;
+  padding: 0.4em var(--side-padding);
+}
+
+ul {
+  margin: 2em;
+  padding: 2em;
+}
+
+li {
+  font-size: var(--font-size-2);
+  margin: .5em 1.8em;
+  padding: 0;
 }
 
 a {
   color: var(--color-link);
-  text-decoration: none;
-  padding: calc(var(--font-size-1) / 4);
-  display: block;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-h1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-h1 img {
-  display: block;
-  height: 100%;
-  width: auto;
-  max-height: 100vh;
-  object-fit: contain;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: var(--font-size-1) 0;
-  width: min(50%, 512px);
-}
-
-h1,
-li {
-  margin: 0;
-  padding: calc(var(--font-size-1) / 4);
+footer {
+  color: var(--color-text-subtle);
 }

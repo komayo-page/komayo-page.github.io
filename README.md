@@ -15,3 +15,11 @@ This project is dedicated to hosting a static HTML page that features the legend
 The page is currently live and can be visited at [https://komayo.page](https://komayo.page).
 
 For more details, refer to the source code of the `index.html` included in this repository.
+
+## Development
+
+Start a local server:
+
+```sh
+python3 -m http.server
+```
