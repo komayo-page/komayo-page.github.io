@@ -26,10 +26,10 @@ html {
                       ui-serif,
                       serif;
 
-  --font-size-1: calc(var(--content-size)/14);
+  --font-size-1: calc(var(--content-size)/15);
   --font-size-2: calc(var(--content-size)/20);
-  --font-size-3: calc(var(--content-size)/26);
-  --font-size-4: calc(var(--content-size)/32);
+  --font-size-3: calc(var(--content-size)/25);
+  --font-size-4: calc(var(--content-size)/30);
 
   --side-padding: calc(1vw + 8px);
 
